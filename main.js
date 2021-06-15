@@ -18,7 +18,7 @@ function createWindow () {
   win.setMaximizable(false);
   win.setAlwaysOnTop(true);
   win.removeMenu();
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
   win.loadFile('index.html');
 }
 
