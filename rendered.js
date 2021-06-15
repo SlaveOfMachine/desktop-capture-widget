@@ -32,6 +32,9 @@ function takeScreenshot() {
             const name = `${Str.random(5)}.jpeg`;
             saveFile(name, 'screenshots', base64Code, 'base64');
             toggleLoader('.screenshot-button', false);
+        })
+        .catch(e => {
+            alert(e);
         });
 }
 
@@ -42,7 +45,10 @@ function recordVideo() {
             audio: { mandatory: { chromeMediaSource: 'desktop' } },
             video: { mandatory: { chromeMediaSource: 'desktop' } },
         }).then(stream => handleStream(stream))
-        .catch(() => alert('Failed to capture'));
+        .catch(e => {
+            alert(e);
+            toggleLoader('.video-button', false);
+        });
     });
 }
 
