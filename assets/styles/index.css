@@ -1,0 +1,84 @@
+body {
+    background: #212121;
+    transition: 0.3s;
+}
+.capture-buttons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-app-region: drag;
+}
+.control-button {
+    border: none;
+    background: #0D47A1;
+    color: #EEEEEE;
+    border-radius: 3px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 5%;
+    width: 40px;
+    height: 34px;
+    outline: none !important;
+    -webkit-app-region: no-drag;
+    display: flex;
+    align-items: center;
+}
+
+.loader {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #FAFAFA;
+    border-radius: 10px;
+    border-top-color: #F50057;
+    animation: spin 1s infinite;
+    animation-delay: 0ms;
+    animation-timing-function: linear;
+    display: none;
+}
+
+.video-stop-button {
+    display: none;
+    animation: pulsate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transition: 3s;
+}
+
+@keyframes spin {
+    0%{
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    
+    100%{
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        background: #0D47A1;
+    }
+    50% {
+        background: #F50057;
+    }
+    100% {
+        background: #0D47A1;
+    }
+}

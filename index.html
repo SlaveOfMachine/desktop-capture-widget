@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Capture App</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel='stylesheet' href='./assets/styles/index.css' />
+</head>
+<body>
+    <div class="capture-buttons">
+        <button class="screenshot-button control-button">
+            <img class="screenshot-button-icon" src='./assets/icons/camera.svg' />
+            <div class="loader screenshot-button-loader"></div>
+        </button>
+        <button class="video-record-button control-button">
+            <img class="video-button-icon" src='./assets/icons/video.svg' />
+            <div class="loader video-button-loader"></div>
+        </button>
+        <button class="video-stop-button control-button">
+            <img src='./assets/icons/stop.svg'  class="stop-button-icon"/>
+        </button>
+        <button class="close-button control-button">
+            <img src='./assets/icons/close.svg' />
+        </button>
+    </div>
+    <script src='./rendered.js'></script>
+</body>
+</html>
